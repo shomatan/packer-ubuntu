@@ -1,0 +1,3 @@
+[submodule "playbook/roles/virtualbox-guest"]
+	path = playbook/roles/virtualbox-guest
+	url = https://github.com/shomatan/ansible-virtualbox-guest.git
