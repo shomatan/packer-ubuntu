@@ -1,0 +1,7 @@
+# packer
+packer_cache/
+builds/
+output-*
+
+# vagrant
+.vagrant/
