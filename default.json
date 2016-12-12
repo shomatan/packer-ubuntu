@@ -51,7 +51,7 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": 81920,
+      "disk_size": 40520,
       "guest_os_type": "Ubuntu_64",
       "headless": true,
       "http_directory": "http",
@@ -65,6 +65,7 @@
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
+      "vm_name": "ubuntu-16.04-amd64",
       "vboxmanage": [
         [
           "modifyvm",

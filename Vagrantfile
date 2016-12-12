@@ -5,11 +5,11 @@ Vagrant.configure("2") do |config|
   end
 
   config.ssh.insert_key = false
+  config.vm.box = "ubuntu-16.04"
+  config.vm.box_url = "file://builds/virtualbox-ubuntu16.04.box"
 
-  config.vm.define "ubuntu" do |machine|
-    machine.vm.hostname = "ubuntu"
-    machine.vm.box = "ubuntu-16.04"
-    machine.vm.box_url = "file://builds/virtualbox-ubuntu16.04.box"
+  config.vm.define :default do |machine|
+    machine.vm.hostname = "default"
     machine.vm.network :private_network, ip: "192.168.33.10"
   end
 
