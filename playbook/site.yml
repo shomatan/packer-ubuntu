@@ -2,7 +2,8 @@
 - hosts: all
   become: true
   pre_tasks:
-
+    - name: Ensure software-properties-common is installed.
+      apt: name=software-properties-common state=present
   roles:
     - role: neovim
     - role: vagrant
