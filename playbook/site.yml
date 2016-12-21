@@ -1,6 +1,9 @@
 ---
 - hosts: all
   become: true
+  pre_tasks:
+
   roles:
+    - role: neovim
     - role: vagrant
     - role: virtualbox-guest
