@@ -4,6 +4,18 @@
   pre_tasks:
     - name: Ensure software-properties-common is installed.
       apt: name=software-properties-common state=present
+
+    # shell
+    - name: Ensure zsh is installed.
+      apt: name=zsh state=present
+
+    - shell: cat /etc/passwd | grep root
+      register: result
+      changed_when: False
+
+    - name: Ensure default shell is zsh.
+      command: chsh -s /bin/zsh
+      when: "'/bin/zsh' not in result.stdout"
   roles:
     - role: neovim
     - role: vagrant
