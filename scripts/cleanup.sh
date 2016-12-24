@@ -4,6 +4,8 @@
 apt -y autoremove
 apt -y update
 
+chmod 755 -R /var/lib/apt/lists/
+
 # Delete unneeded files.
 rm -f /home/vagrant/*.sh
 
